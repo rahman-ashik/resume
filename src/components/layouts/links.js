@@ -1,15 +1,19 @@
 const links = [
-    {
-        id: 1,
-        tolink: '/',
-        namelink: 'Home 01'
-    },
-    {
-        id: 2,
-        tolink: '/home-02',
-        namelink: 'Home 02'
-    },
+  {
+    id: 1,
+    tolink: "/",
+    namelink: "Home 01",
+  },
+  {
+    id: 2,
+    tolink: "/home-02",
+    namelink: "Home 02",
+  },
+  {
+    id: 3,
+    tolink: "/home-03",
+    namelink: "Home 03",
+  },
 ];
 
-
-export default links ;
+export default links;

@@ -1,11 +1,9 @@
-import React, { Component, Fragment } from "react";
-import { AboutMe } from "../layouts/home01/index";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Fragment, Component } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import Banner from "../layouts/home01/Banner";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Intro", href: "#intro", current: true },
+  { name: "Intro", href: "#", current: true },
   { name: "Experience", href: "#", current: false },
   { name: "Projects", href: "#", current: false },
   { name: "Education", href: "#", current: false },
@@ -15,13 +13,46 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-class Home01 extends Component {
+class Home03 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dummy: false,
+      bannerIsOpen: true,
     };
   }
+
+  banner = (
+    <div className="bg-gray-50">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <span className="block">This Page is Under Construction </span>
+          <span className="block text-indigo-600 align-middle">
+            The Development process is ongoing
+          </span>
+        </h2>
+        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+          <div className="inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+              onClick={() => this.setState({ bannerIsOpen: false })}
+            >
+              Ok
+            </a>
+          </div>
+          <div className="ml-3 inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
+              onClick={() => alert(`You've Got To Wait Buddy !`)}
+            >
+              I can't wait
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
   navBar = (
     <Disclosure as="nav" className="bg-gray-800">
@@ -94,7 +125,7 @@ class Home01 extends Component {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
@@ -120,7 +151,7 @@ class Home01 extends Component {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/home03"
+                            href="#"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
@@ -165,12 +196,11 @@ class Home01 extends Component {
     return (
       <>
         {this.navBar}
-        <h3>This is Home01</h3>
-        <Banner id="intro" />
-        <AboutMe />
+        <h3>This is Home03</h3>
+        {this.state.bannerIsOpen ? this.banner : null}
       </>
     );
   }
 }
 
-export default Home01;
+export default Home03;
