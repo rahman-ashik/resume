@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from "react";
-import { AboutMe } from "../layouts/home01/index";
+import { AboutMe, Experience } from "../layouts/home01/index";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Banner from "../layouts/home01/Banner";
 
 const navigation = [
   { name: "Intro", href: "#intro", current: true },
-  { name: "Experience", href: "#", current: false },
+  { name: "Experience", href: "#experience", current: false },
   { name: "Projects", href: "#", current: false },
   { name: "Education", href: "#", current: false },
 ];
@@ -168,6 +168,7 @@ class Home01 extends Component {
         <h3>This is Home01</h3>
         <Banner id="intro" />
         <AboutMe />
+        <Experience id="experience" />
       </>
     );
   }

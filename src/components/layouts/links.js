@@ -1,7 +1,7 @@
 const links = [
   {
     id: 1,
-    tolink: "/",
+    tolink: "/home-01",
     namelink: "Home 01",
   },
   {
