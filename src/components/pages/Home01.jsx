@@ -24,7 +24,7 @@ class Home01 extends Component {
   }
 
   navBar = (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 sticky top-0">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -166,9 +166,13 @@ class Home01 extends Component {
       <>
         {this.navBar}
         <h3>This is Home01</h3>
-        <Banner id="intro" />
-        <AboutMe />
-        <Experience id="experience" />
+        <div id="intro">
+          <Banner />
+          <AboutMe />
+        </div>
+        <div id="experience">
+          <Experience />
+        </div>
       </>
     );
   }
