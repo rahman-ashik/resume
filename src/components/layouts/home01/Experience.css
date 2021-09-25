@@ -14,7 +14,7 @@
 }
 
 .t-break {
-  max-width: 50%;
+  /* max-width: 50%; */
   word-wrap: break-word;
   white-space: pre-wrap;
   overflow: hidden;
@@ -22,7 +22,10 @@
   object-fit: contain;
 }
 .card {
-  box-shadow: 10px 0px 34px 5px rgba(0, 0, 0, 0.74);
-  -webkit-box-shadow: 10px 0px 34px 5px rgba(0, 0, 0, 0.74);
-  -moz-box-shadow: 10px 0px 34px 5px rgba(0, 0, 0, 0.74);
+  box-shadow: 10px 0px 34px 5px rgba(0, 0, 0, 0.151);
+}
+
+.logo {
+  height: 5rem;
+  margin: auto;
 }
