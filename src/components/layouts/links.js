@@ -1,4 +1,4 @@
-const links = [
+export const links = [
   {
     id: 1,
     tolink: "/home-01",
@@ -15,5 +15,3 @@ const links = [
     namelink: "Home 03",
   },
 ];
-
-export default links;

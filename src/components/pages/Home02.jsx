@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import "../layouts/home02/navBar.css";
+import "../layouts/home02/styles/navBar.css";
 import Index from "../layouts/home02/Index";
 
 const navigation = [
