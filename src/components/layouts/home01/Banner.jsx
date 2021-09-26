@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class Banner extends Component {
+export default class Banner extends Component {
   render() {
     return (
       <div id={this.props.id}>
@@ -10,5 +10,3 @@ class Banner extends Component {
     );
   }
 }
-
-export default Banner;

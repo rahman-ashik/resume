@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { AboutMe, Experience } from "../layouts/home01/index";
+import { AboutMe, Experience, Projects } from "../layouts/home01/index";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Banner from "../layouts/home01/Banner";
@@ -8,15 +8,15 @@ import "../layouts/home01/styles/Experience.css";
 const navigation = [
   { name: "Intro", href: "#intro", current: true },
   { name: "Experience", href: "#experience", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Education", href: "#", current: false },
+  { name: "Projects", href: "#projects", current: false },
+  { name: "Education", href: "#education", current: false },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-class Home01 extends Component {
+export default class Home01 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -95,7 +95,7 @@ class Home01 extends Component {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/home-01"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
@@ -166,13 +166,12 @@ class Home01 extends Component {
     return (
       <>
         {this.navBar}
-        <h3>This is Home01</h3>
+        {/* <h3>This is Home01</h3> */}
         <Banner id="intro" />
         <AboutMe />
         <Experience id="experience" />
+        <Projects id="projects" />
       </>
     );
   }
 }
-
-export default Home01;

@@ -4,7 +4,7 @@ import { links } from "../links";
 import { menus } from "../menus";
 import { bloglinks } from "../bloglinks";
 
-class Header extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -100,5 +100,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;

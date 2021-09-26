@@ -1,6 +1,6 @@
 import React from "react";
 
-class AboutMe extends React.Component {
+export default class AboutMe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -10,7 +10,7 @@ class AboutMe extends React.Component {
     return (
       <>
         <div class="p-4">
-          <h1 className="text-center"> AboutMe Component</h1>
+          {/* <h1 className="text-center"> AboutMe Component</h1> */}
           <div class="text-center mb-4 opacity-90">
             <a href="#" class="block relative">
               <img
@@ -101,5 +101,3 @@ class AboutMe extends React.Component {
     );
   }
 }
-
-export default AboutMe;
