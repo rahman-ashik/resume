@@ -1,8 +1,13 @@
 import React, { Component, Fragment } from "react";
-import { AboutMe, Experience, Projects } from "../layouts/home01/index";
+import {
+  Banner,
+  AboutMe,
+  Experience,
+  Projects,
+  Education,
+} from "../layouts/home01/index";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import Banner from "../layouts/home01/Banner";
 import "../layouts/home01/styles/Experience.css";
 
 const navigation = [
@@ -101,7 +106,7 @@ export default class Home01 extends Component {
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
-                            Style 1
+                            Default
                           </a>
                         )}
                       </Menu.Item>
@@ -171,6 +176,7 @@ export default class Home01 extends Component {
         <AboutMe />
         <Experience id="experience" />
         <Projects id="projects" />
+        <Education id="education" />
       </>
     );
   }

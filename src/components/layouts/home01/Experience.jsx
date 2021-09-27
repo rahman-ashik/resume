@@ -7,7 +7,7 @@ class Exp extends React.Component {
       this.props;
     return (
       <>
-        <div class="card py-4 px-8 shadow-2xl rounded-lg my-20">
+        <div className="card py-4 px-8 shadow-2xl rounded-lg my-20">
           <div className="p-10 flex justify-evenly justify-items-center justify-self-center content-evenly align-items-center align-self-center place-content-evenly place-items-center place-self-center break-words">
             <div id="exp-n t-break">
               <img className="logo" src={`${logo}`} alt={place} />
@@ -33,7 +33,7 @@ export default class Experience extends React.Component {
   render() {
     return (
       <>
-        <div className="pt-5 mt-5 max-w-4xl container mx-auto p-5">
+        <div className="max-w-4xl container mx-auto p-5">
           <div className="text-center">
             <h1
               id={this.props.id}
@@ -42,19 +42,21 @@ export default class Experience extends React.Component {
               Experience
             </h1>
           </div>
-          {exp.map((job, i) => {
-            return (
-              <Exp
-                id={exp[i].id}
-                employment={exp[i].employment}
-                place={exp[i].place}
-                logo={exp[i].logo}
-                address={exp[i].address}
-                duration={exp[i].duration}
-                description={exp[i].description}
-              />
-            );
-          })}
+          <div>
+            {exp.map((job, i) => {
+              return (
+                <Exp
+                  id={exp[i].id}
+                  employment={exp[i].employment}
+                  place={exp[i].place}
+                  logo={exp[i].logo}
+                  address={exp[i].address}
+                  duration={exp[i].duration}
+                  description={exp[i].description}
+                />
+              );
+            })}
+          </div>
         </div>
       </>
     );

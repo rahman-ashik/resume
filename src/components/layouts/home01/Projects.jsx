@@ -7,7 +7,7 @@ class Proj extends React.Component {
     const { name, description, link, img } = this.props;
     return (
       <article className="card overflow-hidden rounded-lg shadow-lg">
-        <img src={`${img}`} alt="Placeholder" className="block h-auto w-full" />
+        {/* <img src={`${img}`} alt="Project" className="block h-auto w-full" /> */}
         <header className="flex items-center justify-between leading-tight p-2 md:p-4">
           <h1 className="text-lg font-bold text-center container mx-auto">
             {name}
@@ -19,8 +19,8 @@ class Proj extends React.Component {
             className="no-underline text-grey-darker text-center align-center"
             href={`${link}`}
           >
-            <button class="bg-blue-700 hover:bg-black text-white font-semibold p-5 py-2 px-4 rounded-full">
-              <p>Checkout the repo</p>
+            <button className="bg-blue-700 hover:bg-black text-white m-5 p-5 py-2 px-4 rounded-full">
+              <p className="text-xs">Checkout the repo</p>
             </button>
           </a>
         </footer>
@@ -39,7 +39,7 @@ export default class Projects extends React.Component {
           </h1>
         </div>
         <div className="container my-12 mx-auto px-4 md:px-12">
-          <div className="flex flex-wrap -mx-1 lg:-mx-4">
+          <div className="flex flex-wrap justify-center justify-items-center justify-self-center content-evenly align-items-center align-self-center place-content-evenly place-items-center place-self-center break-words -mx-1 lg:-mx-4">
             {proj.map((p, i) => {
               return (
                 <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">

@@ -9,7 +9,7 @@ export default class AboutMe extends React.Component {
   render() {
     return (
       <>
-        <div class="p-4">
+        <div id={this.props.id} class="p-4">
           {/* <h1 className="text-center"> AboutMe Component</h1> */}
           <div class="text-center mb-4 opacity-90">
             <a href="#" class="block relative">
