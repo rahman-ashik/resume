@@ -9,7 +9,10 @@ export default class AboutMe extends React.Component {
   render() {
     return (
       <>
-        <div id={this.props.id} class="p-4">
+        <div
+          id={this.props.id}
+          class="p-4 pt-10 mt-10 xl:w-4/12 container mx-auto my-auto"
+        >
           {/* <h1 className="text-center"> AboutMe Component</h1> */}
           <div class="text-center mb-4 opacity-90">
             <a href="#" class="block relative">
@@ -29,9 +32,12 @@ export default class AboutMe extends React.Component {
             </p>
             <p class="text-xxl text-gray-500 dark:text-gray-400 max-w py-4 font-light">
               Born on November 20, 1994 in Dhaka, Bangladesh. <br />
-              I am a pursuing a Bachelors of Computer Science <br />
-              at Queens College, New York. <br />
-              ... More info to add here / TODO
+              I am pursuing a Bachelors of Computer Science <br /> at Queens
+              College, New York. <br />I am a flexible and enthusiastic problem
+              solver seeking a position as a Software Developer/Engineer to
+              utilize my coding, analysis skills and gain further experience in
+              writing readable code and building solutions for building reliable
+              services, apps, and websites.
             </p>
           </div>
           <div class="pt-8 flex border-t border-gray-200 w-44 mx-auto text-gray-500 items-center justify-between">

@@ -1,29 +1,39 @@
 import React, { Component, Fragment } from "react";
+import {
+  Banner,
+  AboutMe,
+  Experience,
+  Projects,
+  Education,
+} from "../layouts/home01/Index";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import "../layouts/home02/styles/navBar.css";
-import Index from "../layouts/home02/Index";
+import "./styles.css";
 
 const navigation = [
-  { name: "Intro", href: "#", current: true },
-  { name: "Experience", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Education", href: "#", current: false },
+  { name: "Intro", href: "#intro", current: true },
+  { name: "Experience", href: "#experience", current: false },
+  { name: "Projects", href: "#projects", current: false },
+  { name: "Education", href: "#education", current: false },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-class Home02 extends React.Component {
+export default class Home01 extends Component {
   constructor(props) {
     super(props);
     this.state = {
       dummy: false,
     };
   }
+
   navBar = (
-    <Disclosure as="nav" className="bg-acrylic">
+    <Disclosure
+      as="nav"
+      className="bg-opacity-0 backdrop-filter backdrop-invert backdrop-blur-2xl backdrop-saturate-200 backdrop-opacity-95 sticky top-0 z-50"
+    >
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -99,27 +109,27 @@ class Home02 extends React.Component {
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
-                            Style 1
+                            Default
                           </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/home-02"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
-                            Style 2
+                            Dark
                           </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/home-03"
+                            href="/home03"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
@@ -159,15 +169,18 @@ class Home02 extends React.Component {
       )}
     </Disclosure>
   );
+
   render() {
     return (
       <>
         {this.navBar}
-        <h3>This is Home02</h3>
-        <Index />
+        {/* <h3>This is Home01</h3> */}
+        <Banner id="intro" />
+        <AboutMe />
+        <Experience id="experience" />
+        <Projects id="projects" />
+        <Education id="education" />
       </>
     );
   }
 }
-
-export default Home02;

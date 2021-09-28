@@ -1,12 +1,11 @@
 import React from "react";
 import { proj } from "../projects";
-import "./styles/Experience.css";
 
 class Proj extends React.Component {
   render() {
     const { name, description, link, img } = this.props;
     return (
-      <article className="card overflow-hidden rounded-lg shadow-lg">
+      <article className="card overflow-hidden rounded-lg shadow-4xl">
         {/* <img src={`${img}`} alt="Project" className="block h-auto w-full" /> */}
         <header className="flex items-center justify-between leading-tight p-2 md:p-4">
           <h1 className="text-lg font-bold text-center container mx-auto">

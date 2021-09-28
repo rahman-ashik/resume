@@ -1,12 +1,8 @@
-import React from "react";
+import Header from "./Header";
 import AboutMe from "./AboutMe";
+import Experience from "./Experience";
+import Projects from "./Projects";
+import Education from "./Education";
+import Banner from "./Banner";
 
-const Index = () => {
-  return (
-    <>
-      <AboutMe />
-    </>
-  );
-};
-
-export default Index;
+export { Banner, Header, AboutMe, Experience, Projects, Education };

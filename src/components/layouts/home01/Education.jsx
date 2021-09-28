@@ -11,8 +11,8 @@ class EduCard extends Component {
             <div id="exp-n t-break">
               <img className="logo w-full" src={`${logo}`} alt={place} />
             </div>
-            <div id="exp-d t-break font-normal">
-              <h3 className="font-bold text-lg">{place}</h3>
+            <div id="exp-d font-normal">
+              <h3 className="font-bold text-lg text-center">{place}</h3>
               <h4>{deg}</h4>
               <p className="font-medium">{`Intended Grad: ${grad}`}</p>
               <p className="font-semibold">{`CGPA: ${cgpa}/4.00`}</p>

@@ -9,8 +9,8 @@ class Exp extends React.Component {
       <>
         <div className="card py-4 px-8 shadow-2xl rounded-lg my-20">
           <div className="p-10 flex justify-evenly justify-items-center justify-self-center content-evenly align-items-center align-self-center place-content-evenly place-items-center place-self-center break-words">
-            <div id="exp-n t-break">
-              <img className="logo" src={`${logo}`} alt={place} />
+            <div id="exp-n">
+              <img className="h-20 m-auto" src={`${logo}`} alt={place} />
               <h3 className="font-semibold text-lg text-center">
                 {employment}
               </h3>
@@ -19,8 +19,9 @@ class Exp extends React.Component {
                 <p className="text-center">{address}</p>
                 <p>{duration}</p>
               </div>
-              <div id="exp-d t-break font-normal"></div>
-              <p className="text-sm pt-3">{description}</p>
+              <div id="exp-d ">
+                <p className="text-sm pt-3">{description}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -37,7 +38,7 @@ export default class Experience extends React.Component {
           <div className="text-center">
             <h1
               id={this.props.id}
-              className="font-black text-center align-top mt-10 pt-10 ex-txt"
+              className="font-black text-center align-top mt-10 pt-10 text-4xl break-words"
             >
               Experience
             </h1>

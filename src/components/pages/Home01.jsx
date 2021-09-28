@@ -5,10 +5,10 @@ import {
   Experience,
   Projects,
   Education,
-} from "../layouts/home01/index";
+} from "../layouts/home01/Index";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import "../layouts/home01/styles/Experience.css";
+import "./styles.css";
 
 const navigation = [
   { name: "Intro", href: "#intro", current: true },
@@ -30,7 +30,7 @@ export default class Home01 extends Component {
   }
 
   navBar = (
-    <Disclosure as="nav" className="bg-gray-800 sticky top-0">
+    <Disclosure as="nav" className="bg-gray-800 sticky top-0 z-50">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -119,7 +119,7 @@ export default class Home01 extends Component {
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
-                            Style 2
+                            Dark
                           </a>
                         )}
                       </Menu.Item>
