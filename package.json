@@ -1,6 +1,6 @@
 {
-  "homepage": " https://rahman-ashik.github.io/resume/",
-  "name": "ashik-portfolio",
+  "homepage": " http://rahman-ashik.github.io/resume/",
+  "name": "resume",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
